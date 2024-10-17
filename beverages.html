@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEVERAGES</title>
+
+    <style>
+      body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav {
+        color: black;
+        /* border: 1px solid black; */
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 20px;
+        /* overflow: hidden; */
+        margin-top: 10px;
+      }
+
+      .nav a {
+        text-decoration: none;
+        padding-left: 35px;
+        padding-top: 2px;
+      }
+
+      .nav a:hover {
+        text-decoration: underline;
+        text-decoration-color: blue;
+      }
+
+      .nav a:visited {
+        color: black;
+      }
+
+      .nav a:focus {
+        color: black;
+      }
+
+      .nav a:active {
+        text-decoration: underline;
+        text-decoration-color: blue;
+      }
+
+      /* grid styles */
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+
+        margin-top: 20px;
+        /* border: 1px solid black; */
+      }
+
+      .grid-item {
+        padding: 15px;
+        /* border: 1px solid black; */
+      }
+
+      .grid-item:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      /* .grid-item input[type="submit"] {
+            background-color: rgb(142, 223, 226);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: 30px;
+            cursor: pointer;
+        } */
+
+      button {
+        background-color: rgb(142, 223, 226);
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        height: 30px;
+        width: 100%;
+        cursor: pointer;
+      }
+
+      #popup-message {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #4caf50;
+        color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      #popup-message button {
+        margin-top: 10px;
+        padding: 5px 15px;
+        background-color: white;
+        color: #4caf50;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #popup-message button:hover {
+        background-color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <a href="index.php"><img src="logo1.jpg" alt="logo" /></a>
+      <a href="pizza.html">PIZZAS</a>
+      <a href="pasta.html">PASTAS</a>
+      <a href="dessert.html">DESSERTS</a>
+      <a href="beverages.html">BEVERAGES</a>
+      <a href="cart.php"
+        ><img
+          src="cart.png"
+          alt="cart"
+          width="28px"
+          height="28px"
+          style="float: right; margin-right: 150px; margin-top: 7px"
+      /></a>
+    </div>
+
+    <div class="grid-container">
+      <div class="grid-item">
+        <img
+          src="doublechocolatemilkshake.jpg"
+          alt=""
+          width="100%"
+          height="240px"
+        />
+
+        <h4>Double Chocolate Milk Shake (300ml)</h4>
+
+        <p style="color: rgb(152, 159, 165)">
+          Take a sip of a creamy concoction of double chocolate and lose
+          &nbsp;yourself in a chocolate coma!
+        </p>
+
+        <h4 style="text-align: center">Rs 850.00</h4>
+
+        <button onclick="addToCart('Double Chocolate Milk Shake (300ml)', 850)">
+          Add to Cart
+        </button>
+        <!-- <input type="submit" name="" id="" value="ADD TO CART" style="width: 100%;"> -->
+      </div>
+
+      <div class="grid-item">
+        <img src="strawberrymilkshake.jpg" alt="" width="100%" height="240px" />
+
+        <h4>Strawberry Milk Shake (300ml)</h4>
+
+        <p style="color: rgb(152, 159, 165)">
+          Go &nbsp; red &nbsp;with &nbsp;the &nbsp;delicious &nbsp;flavour
+          &nbsp;of strawberry, &nbsp;mixed and blended into a creamy shake!
+        </p>
+
+        <h4 style="text-align: center">Rs 850.00</h4>
+
+        <button onclick="addToCart('Strawberry Milk Shake (300ml)', 850)">
+          Add to Cart
+        </button>
+        <!-- <input type="submit" name="" id="" value="ADD TO CART" style="width: 100%;"> -->
+      </div>
+
+      <div class="grid-item">
+        <img src="thickmangomagic.jpg" alt="" width="100%" height="240px" />
+
+        <h4>Thick Mango Magic (300ml)</h4>
+
+        <p style="color: rgb(152, 159, 165)">
+          A tropical blend of the juiciest mango flavour creating the perfect
+          beverage to soothe your taste-buds!
+        </p>
+
+        <h4 style="text-align: center">Rs 600.00</h4>
+
+        <button onclick="addToCart('Thick Mango Magic (300ml)', 600)">
+          Add to Cart
+        </button>
+        <!-- <input type="submit" name="" id="" value="ADD TO CART" style="width: 100%;"> -->
+      </div>
+
+      <div class="grid-item">
+        <img src="vanillamilkshake.jpg" alt="" width="100%" height="240px" />
+
+        <h4>Vanilla Milk Shake (300ml)</h4>
+
+        <p style="color: rgb(152, 159, 165)">
+          Go classic on a hot day, sit back and relax with a cold vanilla shake
+          made to quench more than the thirst in you!
+        </p>
+
+        <h4 style="text-align: center">Rs 850.00</h4>
+
+        <button onclick="addToCart('Vanilla Milk Shake (300ml)', 850)">
+          Add to Cart
+        </button>
+        <!-- <input type="submit" name="" id="" value="ADD TO CART" style="width: 100%;"> -->
+      </div>
+    </div>
+    <div id="popup-message">
+      <p>Item added to cart successfully!</p>
+      <button onclick="hidePopup()">OK</button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
