@@ -1,2 +1,2 @@
 # E-Restaurant
-The Continuous assessment under the web development module.
+The website is created using HTML, CSS, and JavaScript.
